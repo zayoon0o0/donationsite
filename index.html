@@ -146,11 +146,18 @@
   </div>
  <div class="section">
     <div class="label">wallet address for Bitcoin</div>
-    <div class="address-box" onclick="copy()">
+    <div class="address-box" onclick="copyb()">
       bc1qfwdafzaqnasy064q7ukcta0e79tpccch52967d
     </div>
-    <span class="copied" id="copied">copied ✓</span>
+    <span class="copied" id="copiedb">copied ✓</span>
   </div>
+  <div class="section">
+     <div class="label">wallet address for Litecoin (LTC)</div>
+     <div class="address-box" onclick="copyl()">
+       ltc1q090zremxu6lhkwkz32srw3qs6yy5qhknk3a34c
+     </div>
+     <span class="copied" id="copiedl">copied ✓</span>
+   </div>
 
   <hr>
 
@@ -167,6 +174,18 @@
   function copy() {
     navigator.clipboard.writeText('0x3417ce70BE05911E9B4AeFc05A7733A78FA5be51');
     const el = document.getElementById('copied');
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 2000);
+  }
+  function copyb() {
+    navigator.clipboard.writeText('bc1qfwdafzaqnasy064q7ukcta0e79tpccch52967d');
+    const el = document.getElementById('copiedb');
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 2000);
+  }
+  function copyl() {
+    navigator.clipboard.writeText('ltc1q090zremxu6lhkwkz32srw3qs6yy5qhknk3a34c');
+    const el = document.getElementById('copiedl');
     el.classList.add('show');
     setTimeout(() => el.classList.remove('show'), 2000);
   }
